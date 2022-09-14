@@ -2,9 +2,12 @@ import React,{useState} from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { NavLink } from  "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 import Sign_img from './Sign_img'
 const Home = () => {
+  const history = useNavigate();
+
     const[data,setData]=useState({name:"",email:"",date:"",password:""});
     const[inpal,setInpal]=useState([]);
     const handleonChange=(e)=> {
@@ -31,6 +34,7 @@ if(password == ""){
     console.log("data added Succesfully")
 }
         localStorage.setItem("userjs",JSON.stringify([...inpal,data]));
+        history("/login")
     }
   return (
     <>

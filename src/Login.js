@@ -60,7 +60,7 @@ if(userlogin.length ===0){
         <section className="d-flex justify-content-between">
           <div className="left_data" style={{ width: "100%" }}>
             <h3 className="text-center col-lg-6">Sign In</h3>
-            <Form onSubmit={(e) => handlesubmit(e)}>
+            <Form onSubmit={(e) => handlesubmit(e)} className="md-3 col-lg-6">
               <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                 <Form.Control
                   type="email"
@@ -84,15 +84,15 @@ if(userlogin.length ===0){
                   onChange={(e) => handleonChange(e)}
                 />
               </Form.Group>
-              <Form.Group
+              {/* <Form.Group
                 className="mb-3 col-lg-6"
                 controlId="formBasicCheckbox"
-              ></Form.Group>
-              <Button variant="primary" type="submit" className="mb-3 col-lg-6" style={{margin_right: "270rem"}}>
+              ></Form.Group> */}
+              <Button variant="primary" type="submit" className="mb-3 col-lg-6 m-auto">
                 Submit
               </Button>
             </Form>
-            <p className="mt-3">
+            <p className="mt-">
               Already Have an Account <span>SignIn</span>
             </p>
           </div>
