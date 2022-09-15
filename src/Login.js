@@ -50,7 +50,7 @@ if(userlogin.length ===0){
 }else{
     console.log("user login succesfully")
     localStorage.setItem("user_login",JSON.stringify(getDataArr))
-    history("/details");
+    history("/Contact");
 }
     }
   };
@@ -60,8 +60,8 @@ if(userlogin.length ===0){
         <section className="d-flex justify-content-between">
           <div className="left_data" style={{ width: "100%" }}>
             <h3 className="text-center col-lg-6">Sign In</h3>
-            <Form onSubmit={(e) => handlesubmit(e)} className="md-3 col-lg-6">
-              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
+            <Form onSubmit={(e) => handlesubmit(e)} className="md-3 col-lg-7">
+              <Form.Group className="mb-3 col-lg-10" controlId="formBasicEmail">
                 <Form.Control
                   type="email"
                   placeholder="Enter email"
@@ -72,7 +72,7 @@ if(userlogin.length ===0){
               </Form.Group>
 
               <Form.Group
-                className="mb-3 col-lg-6"
+                className="mb-3 col-lg-10"
                 controlId="formBasicPassword"
               >
                 <Form.Control
@@ -88,13 +88,13 @@ if(userlogin.length ===0){
                 className="mb-3 col-lg-6"
                 controlId="formBasicCheckbox"
               ></Form.Group> */}
-              <Button variant="primary" type="submit" className="mb-3 col-lg-6 m-auto">
+              <Button variant="primary" type="submit" className='btn-container d-flex justify-content-around mt-2 col-lg-10'>
                 Submit
               </Button>
             </Form>
-            <p className="mt-">
-              Already Have an Account <span>SignIn</span>
-            </p>
+            {/* <p className='btn-container d-flex justify-content-around mt-2 col-lg-10'>
+              Already Have an Account<span>SignIn</span>
+            </p> */}
           </div>
           <Sign_img />
         </section>

@@ -7,6 +7,7 @@ import { Switch, Route, Routes } from "react-router-dom";
 import Login from './Login';
 import Details from './Details';
 import Error from './Error';
+import Contact from './Contact';
 // import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/details" element={<Details/>}/>
           <Route path="/*" element={<Error/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+
       </Routes>
     </div>
   );
